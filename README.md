@@ -11,3 +11,8 @@ Use existing .stl models or if you want to customize something,
 - Open .scad file
 - Make modifications, click render, export
 - If your modifications are something that is useful for others, please create a PR
+
+License
+-------
+
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](LICENSE.md)
