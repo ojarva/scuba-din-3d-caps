@@ -4,7 +4,7 @@ use <threadlib/threadlib.scad>
 name = "XX";
 
 type = "G5/8";
-turns = 5;
+turns = 4;
 Douter = 27;
 higbee_arc = 45;
 $fn = 100;
@@ -45,11 +45,11 @@ scale([1.01, 1.01, 1.01]) {
     }
     // Sides
     difference() {
-        translate([0,0,15]) cylinder(h=25, r=14, center=true);
-        translate([0,0,15]) cylinder(h=25.2, r=11.6, center=true);
+        translate([0,0,12]) cylinder(h=20, r=14, center=true);
+        translate([0,0,12]) cylinder(h=20.2, r=11.6, center=true);
     }
     // Rounded bottom
-    translate([0,0,27.5]) donut(12.8,1.2);
+    translate([0,0,22]) donut(12.8,1.2);
 
     // Hole for a cord
     rotate([0,0,30]) translate([15,0,0]) donut(3.5, 2);
