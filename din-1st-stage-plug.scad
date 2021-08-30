@@ -1,4 +1,4 @@
-use <threadlib/threadlib.scad>
+use <threadlib.scad>
 
 // Change this for whatever you want to have on the top; leave empty for no text.
 name = "XX";
@@ -14,8 +14,8 @@ module donut(r1, r2) {
 }
 
 // Upscale everything a tiny bit so that threads fit nicely
-scale([1.01, 1.01, 1.01]) {
-    translate([0,0,12]) nut(type, turns, Douter, higbee_arc=higbee_arc);
+scale([1.02, 1.02, 1.02]) {
+    translate([0,0,9]) nut(type, turns, Douter, higbee_arc=higbee_arc);
     // Top part
     difference() {
         intersection () {
@@ -45,13 +45,9 @@ scale([1.01, 1.01, 1.01]) {
     }
     // Sides
     difference() {
-        translate([0,0,12]) cylinder(h=20, r=14, center=true);
-        translate([0,0,12]) cylinder(h=20.2, r=11.6, center=true);
+        translate([0,0,9]) cylinder(h=20, r=14, center=true);
+        translate([0,0,9]) cylinder(h=20.2, r=11.6, center=true);
     }
     // Rounded bottom
-    translate([0,0,22]) donut(12.8,1.2);
-
-    // Hole for a cord
-    rotate([0,0,30]) translate([15,0,0]) donut(3.5, 2);
+    translate([0,0,19]) donut(12.8,1.2);
 }
-
