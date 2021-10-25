@@ -41,8 +41,8 @@ scale([0.99, 0.99, 0.99]) {
             }
             // Lid / top part
             difference() {
-                // Move by -.1mm to avoid rendering errors for overlapping elements
-                translate([0, 0, top_part_height/2-0.1]) {
+                // Move by +.01mm to avoid rendering errors for overlapping elements
+                translate([0, 0, top_part_height/2+0.01]) {
                     intersection() {
                         // Main body
                         cylinder(h=top_part_height, r=14, center=true);
@@ -73,6 +73,7 @@ scale([0.99, 0.99, 0.99]) {
         // Overpressure hole
         cylinder(h=40, r=2, center=true);
         // Round indent on the inner side
-        translate([0,0,main_body_height+top_part_height]) sphere(r=inner_sphere_r);
+        translate([0,0,main_body_height+top_part_height]) cylinder(h=14, r=inner_sphere_r, center=true);
+        translate([0,0,main_body_height+top_part_height-7]) sphere(r=inner_sphere_r);
     }
 }
